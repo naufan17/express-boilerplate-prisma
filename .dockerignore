@@ -1,0 +1,10 @@
+/dist
+/logs
+/node_modules
+/generated
+
+Dockerfile
+
+docker-compose.yml
+
+.env
