@@ -95,6 +95,9 @@ docker compose down
 ## Project Structure
 ```
 docs\                     # Documentation files
+|--prisma\
+  |--migrations\          # Database migrations
+  |--seeds\               # Database seeds
 src\
   |--app\
     |--api\        
@@ -110,9 +113,6 @@ src\
     |--type\              # Typescript types
     |--util\              # Utility function
     |--app.ts             # Main app entry point
-  |--database\
-    |--migrations\        # Database migrations
-    |--seeds\             # Database seeds
   |--index.ts             # Main entry point
 test\
   |--integration\         # Integration tests
