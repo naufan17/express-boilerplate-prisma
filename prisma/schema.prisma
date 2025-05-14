@@ -25,11 +25,13 @@ model users {
   is_verified     Boolean  @default(false)
   created_at      DateTime @default(now())
   updated_at      DateTime @default(now())
+  sessions        sessions[]
 }
 
 model sessions {
   id              String    @id @default(uuid())
   user_id         String
+  user            users     @relation(fields: [user_id], references: [id])
   ip_address      String
   user_agent      String
   login_at        DateTime @default(now())
